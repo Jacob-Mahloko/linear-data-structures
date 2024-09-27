@@ -1,0 +1,28 @@
+.array-container {
+    text-align: center;
+  }
+  
+  .array-visualization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .array-item {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for animations */
+  }
+  
+  .array-item.animating {
+    opacity: 0; /* Fade out effect for removal */
+    transform: translateX(-10px); /* Shift the item to the left */
+  }
+  

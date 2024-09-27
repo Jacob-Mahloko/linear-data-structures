@@ -1,0 +1,47 @@
+.list-container {
+    text-align: center;
+  }
+  
+  .list-visualization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .list-node {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    background-color: lightyellow;
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.5s ease; /* Smooth transition for highlighting */
+  }
+  
+  .list-node.highlight {
+    background-color: lightgreen;
+  }
+  
+  .arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .controls input[type="number"] {
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+  }
+  
+  .controls button {
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+  

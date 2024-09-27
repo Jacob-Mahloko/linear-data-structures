@@ -1,0 +1,74 @@
+/* TheorySection.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 50px;
+    padding: 100px;
+    color: #333;
+  }
+  
+  .theory-container {
+    max-width: 800px;
+    margin: 40px 20px;
+    padding: 100px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .theory-container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p, li {
+      font-size: 1rem;
+    }
+  }
+  

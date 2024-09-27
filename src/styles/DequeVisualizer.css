@@ -1,0 +1,46 @@
+.deque-container {
+    text-align: center;
+  }
+  
+  .deque-visualization {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    margin: 20px 0;
+  }
+  
+  .deque-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content within the item */
+    font-size: 24px;
+    background-color: lightgreen;
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for animations */
+  }
+  
+  .deque-item.animating {
+    opacity: 0; /* Fade out effect for removal */
+    transform: translateX(-20px); /* Shift the item left */
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .controls input {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .controls button {
+    padding: 10px 15px;
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  

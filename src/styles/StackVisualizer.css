@@ -1,0 +1,49 @@
+.stack-container {
+    text-align: center;
+  }
+  
+  .stack-visualization {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center; /* Align items to the start */
+    margin: 20px;
+    position: relative; /* To position the bottom indicator */
+  }
+  
+  .arrow {
+    font-size: 36px; /* Arrow size */
+    margin-right: 10px; /* Space between arrow and stack */
+    transform: translateY(-10px); /* Adjust vertical position */
+  }
+  
+  .stack {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    position: relative; /* Allow for bottom indicator positioning */
+  }
+  
+  .stack-item {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background-color: lightcoral;
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for animations */
+  }
+  
+  .stack-item.animating {
+    opacity: 0; /* Fade out effect for removal */
+    transform: translateY(-10px); /* Shift the item up */
+  }
+  
+  .bottom-indicator {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
+  

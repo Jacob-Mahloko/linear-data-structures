@@ -1,0 +1,103 @@
+.home-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .animation-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    animation: gradient 5s ease infinite;
+    z-index: -1;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .animated-title {
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animated-text {
+    font-size: 1.5rem;
+    animation: slideIn 1.5s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .explore-button {
+    background-color: #ff4081;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-button:hover {
+    background-color: #e91e63;
+  }
+
+
+  .data-structure-list {
+    margin-top: 20px;
+    background-color: rgba(57, 133, 247, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .data-structure-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .data-structure-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .data-structure-list li {
+    margin: 10px 0;
+   
+  }
+  
+  .data-structure-list a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-size: medium;
+  }
+  
+  .data-structure-list a:hover {
+    color: #a6b7ca;
+  }
+  

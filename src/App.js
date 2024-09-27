@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ArrayPage from './pages/ArrayPage';
+import StackPage from './pages/StackPage';
+import QueuePage from './pages/QueuePage';
+import DequePage from './pages/DequePage';
+import ListPage from './pages/ListPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/array">Array</Link></li>
+            <li><Link to="/stack">Stack</Link></li>
+            <li><Link to="/queue">Queue</Link></li>
+            <li><Link to="/deque">Deque</Link></li>
+            <li><Link to="/list">List</Link></li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/array" element={<ArrayPage />} />
+          <Route path="/stack" element={<StackPage />} />
+          <Route path="/queue" element={<QueuePage />} />
+          <Route path="/deque" element={<DequePage />} />
+          <Route path="/list" element={<ListPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

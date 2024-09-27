@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+/* Navbar.css */
+
+nav {
+  background-color: #007bff; /* Primary color */
+  color: white; /* Text color */
+  padding: 15px 20px; /* Padding around the nav */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-container {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between title and menu */
+  align-items: center; /* Center items vertically */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-title {
+  font-size: 1.8rem; /* Title size */
+  margin: 0; /* Remove default margin */
+}
+
+nav ul {
+  display: flex; /* Flex layout for the list */
+  gap: 20px; /* Space between items */
+  list-style-type: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+  display: inline; /* Display inline for list items */
+}
+
+nav ul li a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 12px; /* Padding for clickable area */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  nav ul li {
+    margin: 5px 0; /* Margin between items */
   }
 }
