@@ -31,6 +31,10 @@ function App() {
           <Route path="/list" element={<ListPage />} />
         </Routes>
       </div>
+
+      <footer className="footer">
+          <p>&copy; 2024 University Of Pretoria (COS 750) . All Rights Reserved.</p>
+      </footer>
     </Router>
   );
 }

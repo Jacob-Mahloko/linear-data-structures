@@ -52,3 +52,13 @@ nav ul li a:hover {
     margin: 5px 0; /* Margin between items */
   }
 }
+
+.footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
