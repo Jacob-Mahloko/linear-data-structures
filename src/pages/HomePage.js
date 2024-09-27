@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../styles/HomePage.css';
 
 const HomePage = () => {
@@ -24,11 +25,11 @@ const HomePage = () => {
         <div className="data-structure-list">
           <h2>Select a Data Structure:</h2>
           <ul>
-            <li><a href="/array">Arrays</a></li>
-            <li><a href="/stack">Stacks</a></li>
-            <li><a href="/queue">Queues</a></li>
-            <li><a href="/deque">Deques</a></li>
-            <li><a href="/list">Lists</a></li>
+            <li><Link to="/array">Array</Link></li>
+            <li><Link to="/stack">Stack</Link></li>
+            <li><Link to="/queue">Queue</Link></li>
+            <li><Link to="/deque">Deque</Link></li>
+            <li><Link to="/list">List</Link></li>
           </ul>
         </div>
       )}
