@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 import '../styles/HomePage.css';
 
 const HomePage = () => {
   const [showStructures, setShowStructures] = useState(false);
-
+  const router = useNavigate();
   const handleExploreClick = () => {
     setShowStructures(!showStructures);
   };
@@ -25,11 +26,11 @@ const HomePage = () => {
         <div className="data-structure-list">
           <h2>Select a Data Structure:</h2>
           <ul>
-            <li><Link to="/array">Array</Link></li>
-            <li><Link to="/stack">Stack</Link></li>
-            <li><Link to="/queue">Queue</Link></li>
-            <li><Link to="/deque">Deque</Link></li>
-            <li><Link to="/list">List</Link></li>
+            <li onClick={()=>router('array')}>Array</li>
+            <li onClick={()=>router('stack')}>Stack</li>
+            <li onClick={()=>router('queue')}>Queue</li>
+            <li onClick={()=>router('deque')}>Deque</li>
+            <li onClick={()=>router('list')}>List</li>
           </ul>
         </div>
       )}

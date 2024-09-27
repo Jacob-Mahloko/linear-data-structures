@@ -87,17 +87,11 @@
   
   .data-structure-list li {
     margin: 10px 0;
-   
-  }
-  
-  .data-structure-list a {
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s ease;
     font-size: medium;
   }
   
-  .data-structure-list a:hover {
+  .data-structure-list li:hover {
     color: #a6b7ca;
+    cursor: pointer;
   }
   
