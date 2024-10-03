@@ -31,6 +31,7 @@ const HomePage = () => {
             <li onClick={()=>router('queue')}>Queue</li>
             <li onClick={()=>router('deque')}>Deque</li>
             <li onClick={()=>router('list')}>List</li>
+            <li onClick={() => router('/code-editor')}>C++ Code Editor</li> {/* New Option */}
           </ul>
         </div>
       )}
