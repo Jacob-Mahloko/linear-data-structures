@@ -9,7 +9,7 @@ const StackVisualizer = () => {
   // Push element onto the stack
 const pushElement = () => {
   if (value) {
-    setStack([...stack, parseInt(value)]);
+    setStack([...stack, value]);
     setValue('');
   }
 };
@@ -52,7 +52,7 @@ const pushElement = () => {
 
       <div className="controls">
         <input
-          type="number"
+          className='text-input'
           value={value}
           placeholder="Value"
           onChange={(e) => setValue(e.target.value)}
