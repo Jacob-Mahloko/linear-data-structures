@@ -9,7 +9,7 @@ const DequeVisualizer = () => {
   // Enqueue from front
   const enqueueFront = () => {
     if (value) {
-      setDeque([parseInt(value), ...deque]);
+      setDeque([value, ...deque]);
       setValue('');
     }
   };
@@ -17,7 +17,7 @@ const DequeVisualizer = () => {
   // Enqueue from back
   const enqueueBack = () => {
     if (value) {
-      setDeque([...deque, parseInt(value)]);
+      setDeque([...deque, value]);
       setValue('');
     }
   };
@@ -58,6 +58,7 @@ const DequeVisualizer = () => {
     <div className="deque-container">
       <h2>Deque Visualization Demo</h2>
       <div className="deque-visualization">
+      {deque.length > 0 && <text>Front</text>}
         {deque.map((item, idx) => (
           <div
             key={idx}
@@ -66,11 +67,12 @@ const DequeVisualizer = () => {
             {item}
           </div>
         ))}
+        {deque.length > 0 && <text>Back</text>}
       </div>
 
       <div className="controls">
         <input
-          type="number"
+          className='text-input'
           value={value}
           placeholder="Value"
           onChange={(e) => setValue(e.target.value)}

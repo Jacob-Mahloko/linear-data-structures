@@ -35,7 +35,7 @@ const QueueVisualizer = () => {
     <div className="queue-container">
       <h2>Queue Visualization Demo</h2>
       <div className="queue-visualization">
-        {queue.length > 0 && <text>First</text>}
+        {queue.length > 0 && <text>Front</text>}
         {queue.map((item, idx) => (
           <div
             key={idx}
@@ -44,7 +44,7 @@ const QueueVisualizer = () => {
             {item}
           </div>
         ))}
-        {queue.length > 0 && <text>Last</text>}
+        {queue.length > 0 && <text>Back</text>}
       </div>
 
       <div className="controls">
