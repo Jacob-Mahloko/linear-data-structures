@@ -11,12 +11,12 @@
   
   .list-node {
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-size: 18px;
     background-color: lightyellow;
     padding: 10px;
     border: 1px solid #000;
-    margin: 5px;
     border-radius: 10px;
     position: relative;
     transition: background-color 0.5s ease; /* Smooth transition for highlighting */
@@ -24,13 +24,6 @@
   
   .list-node.highlight {
     background-color: lightgreen;
-  }
-  
-  .arrow {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 24px;
-    color: #333;
   }
   
   .controls input[type="number"] {
@@ -44,4 +37,32 @@
     padding: 8px 16px;
     font-size: 16px;
   }
+
+  .list-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .text-front {
+    margin-right: 10px;
+  }
+
+  .text-back {
+    margin-left: 10px;
+  }
   
+  .text-input {
+    height: 35px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .array-index {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+  }
