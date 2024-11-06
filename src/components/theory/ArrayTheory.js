@@ -4,6 +4,11 @@ import GenericTheorySection from './GenericTheorySection';
 const ArrayTheory = () => {
   const title = "Theory of Arrays";
   const introduction = "An array is a fundamental data structure that holds a collection of elements...";
+  const outcomes = [
+    "describe the different types of arrays and how they are stored in storage",
+    "describe how to insert, delete and access an element in an array.",
+    "give example use cases of arrays and justify why an array would be the best suited structure"
+  ];
   const characteristics = [
     "Fixed Size: The size of an array is defined at the time of creation.",
     "Contiguous Memory Allocation: Arrays are stored in contiguous memory locations.",
@@ -43,6 +48,7 @@ const ArrayTheory = () => {
     <GenericTheorySection
       title={title}
       introduction={introduction}
+      outcomes={outcomes}
       characteristics={characteristics}
       types={types}
       operations={operations}
