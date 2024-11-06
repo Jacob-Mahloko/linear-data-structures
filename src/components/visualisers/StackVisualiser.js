@@ -7,12 +7,12 @@ const StackVisualizer = () => {
   const [animatingIndex, setAnimatingIndex] = useState(null);
   
   // Push element onto the stack
-  const pushElement = () => {
-    if (value) {
-      setStack([...stack, parseInt(value)]);
-      setValue('');
-    }
-  };
+const pushElement = () => {
+  if (value) {
+    setStack([...stack, value]);
+    setValue('');
+  }
+};
 
   // Pop element from the stack with animation
   const popElement = () => {
@@ -22,10 +22,10 @@ const StackVisualizer = () => {
     }
 
     // Start the animation for the top element
-    setAnimatingIndex(stack.length - 1);
+    setAnimatingIndex(0);
     setTimeout(() => {
       const newStack = [...stack];
-      newStack.pop(); // Remove the top element
+      newStack.pop();
       setStack(newStack);
       setAnimatingIndex(null); // Reset animation index
     }, 500); // Delay for animation
@@ -35,23 +35,24 @@ const StackVisualizer = () => {
     <div className="stack-container">
       <h2>Stack Visualization Demo</h2>
       <div className="stack-visualization">
-        <div className="arrow" style={{ marginTop: `${(stack.length * 65) + 10}px` }}>top</div> {/* Dynamic position */}
         <div className="stack">
-          {stack.map((item, idx) => (
-            <div
-              key={idx}
-              className={`stack-item ${animatingIndex === idx ? 'animating' : ''}`}
-            >
-              {item}
+          {stack.slice().reverse().map((item, idx) => (
+            <div className='stack-wrapper'>
+              {idx === 0 && <div className='top-indicator'>{"Top >"}</div>}
+              <div
+                key={idx}
+                className={`stack-item ${animatingIndex === idx ? 'animating' : ''}`}
+              >
+                {item}
+              </div>
             </div>
           ))}
         </div>
-        <div className="bottom-indicator">Bottom</div> {/* Indicator for the bottom of the stack */}
       </div>
 
       <div className="controls">
         <input
-          type="number"
+          className='text-input'
           value={value}
           placeholder="Value"
           onChange={(e) => setValue(e.target.value)}

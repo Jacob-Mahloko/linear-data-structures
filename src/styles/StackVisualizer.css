@@ -39,11 +39,33 @@
     opacity: 0; /* Fade out effect for removal */
     transform: translateY(-10px); /* Shift the item up */
   }
-  
-  .bottom-indicator {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #555;
+
+  .stack-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
+
+  .top-indicator {
+    position: absolute;
+    left: 0px;
+  }
+
+  .text-input {
+    height: 35px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    width: 120px;
+  }
+
+  .text-input:focus {
+    border-color: #000000;
+    border-width: 2px;
   }
   

@@ -43,4 +43,14 @@
     margin: 0 5px;
     cursor: pointer;
   }
+
+  .text-input {
+    height: 35px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+  }
   

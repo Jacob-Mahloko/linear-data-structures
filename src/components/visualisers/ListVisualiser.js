@@ -12,7 +12,7 @@ const ListVisualizer = () => {
   // Insert element at the end of the list
   const insertElement = () => {
     if (value) {
-      setList([...list, parseInt(value)]);
+      setList([...list, value]);
       setValue('');
     }
   };
@@ -40,7 +40,7 @@ const ListVisualizer = () => {
 
   const performInsertion = (idx) => {
     const newList = [...list];
-    newList.splice(idx, 0, parseInt(value));
+    newList.splice(idx, 0, value);
     setList(newList);
     setIsInserting(false);
     setCurrentNode(-1); // Reset the current node
@@ -89,26 +89,33 @@ const ListVisualizer = () => {
     <div className="list-container">
       <h2>Linked List Visualization Demo</h2>
       <div className="list-visualization">
+      {list.length > 0 && <text className='text-front'>Front</text>}
         {list.map((item, idx) => (
-          <div
-            key={idx}
-            className={`list-node ${currentNode === idx ? 'highlight' : ''}`}
-          >
-            {item}
-            {idx < list.length - 1 && <div className="arrow">→</div>}
+          <div key={idx} className='list-item'>
+            <div
+              className={`list-node ${currentNode === idx ? 'highlight' : ''}`}
+            >
+              <text className='array-index'>{idx}</text>
+              {item}
+            </div>
+            {idx < list.length - 1 && (
+              <div className="arrow">→</div>
+            )}
           </div>
         ))}
+        {list.length > 0 && <text className='text-back'>Back</text>}
       </div>
 
       <div className="controls">
         <input
-          type="number"
+          className='text-input'
           value={value}
           placeholder="Value"
           onChange={(e) => setValue(e.target.value)}
           disabled={isInserting || isRemoving}
         />
         <input
+          className='text-input'
           type="number"
           value={index}
           placeholder="Index"
