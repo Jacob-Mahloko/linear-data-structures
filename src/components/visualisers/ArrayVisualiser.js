@@ -70,7 +70,8 @@ const ArrayVisualizer = () => {
             key={idx}
             className={`array-item ${animatingIndex === idx ? 'animating' : ''}`}
           >
-            {item}
+            <div className="array-index">{idx}</div> 
+            <div className="array-value">{item}</div> 
           </div>
         ))}
       </div>
