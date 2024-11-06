@@ -10,7 +10,7 @@ const ArrayVisualizer = () => {
   // Insert element at the end of the array
   const insertElement = () => {
     if (value) {
-      setArray([...array, parseInt(value)]);
+      setArray([...array, value]);
       setValue('');
     }
   };
@@ -27,7 +27,7 @@ const ArrayVisualizer = () => {
     setAnimatingIndex(idx);
     setTimeout(() => {
       const newArray = [...array];
-      newArray.splice(idx, 0, parseInt(value));
+      newArray.splice(idx, 0, value);
       setArray(newArray);
       setValue('');
       setIndex('');
@@ -78,12 +78,13 @@ const ArrayVisualizer = () => {
 
       <div className="controls">
         <input
-          type="number"
+          className='text-input'
           value={value}
           placeholder="Value"
           onChange={(e) => setValue(e.target.value)}
         />
         <input
+          className='text-input'
           type="number"
           value={index}
           placeholder="Index"
