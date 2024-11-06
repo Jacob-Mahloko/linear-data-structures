@@ -9,7 +9,7 @@ const QueueVisualizer = () => {
   // Enqueue element to the queue
   const enqueueElement = () => {
     if (value) {
-      setQueue([...queue, parseInt(value)]);
+      setQueue([...queue, value]);
       setValue('');
     }
   };
@@ -35,6 +35,7 @@ const QueueVisualizer = () => {
     <div className="queue-container">
       <h2>Queue Visualization Demo</h2>
       <div className="queue-visualization">
+        {queue.length > 0 && <text>First</text>}
         {queue.map((item, idx) => (
           <div
             key={idx}
@@ -43,11 +44,12 @@ const QueueVisualizer = () => {
             {item}
           </div>
         ))}
+        {queue.length > 0 && <text>Last</text>}
       </div>
 
       <div className="controls">
         <input
-          type="number"
+          className='text-input'
           value={value}
           placeholder="Value"
           onChange={(e) => setValue(e.target.value)}
