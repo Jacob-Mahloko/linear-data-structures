@@ -4,6 +4,13 @@ import GenericTheorySection from './GenericTheorySection';
 const StackTheory = () => {
   const title = "Theory of Stacks";
   const introduction = "A stack is a linear data structure that follows the Last In First Out (LIFO) principle...";
+  const outcomes = [
+    "explain the basic operations performed on a stack: push, pop and peek.",
+    "explain the LIFO principle",
+    "summarize the advantages and disadvantages of using stacks.",
+    "use stack operations to solve practical problems like reversing a string.",
+    "justify the use of a stack over other data structures for certain use cases"
+  ];
   const characteristics = [
     "Fixed Size: The size of a stack is defined at the time of creation.",
     "LIFO Order: The last element added to the stack is the first to be removed.",
@@ -37,6 +44,7 @@ const StackTheory = () => {
     <GenericTheorySection
       title={title}
       introduction={introduction}
+      outcomes={outcomes}
       characteristics={characteristics}
       types={types}
       operations={operations}

@@ -4,6 +4,13 @@ import GenericTheorySection from './GenericTheorySection';
 const DequeTheory = () => {
   const title = "Theory of Deques";
   const introduction = "A double-ended queue (deque) is a linear data structure that allows the insertion and deletion of elements from both ends...";
+  const outcomes = [
+    "describe the different types of deques: input-restricted and output-restricted deque",
+    "list the basic operations performed on a deque: addFirst, addLast, removeFirst, removeLast, peekFirst, and peekLast.",
+    "explain the differences between a deque and standard queues and stacks.",
+    "implement a deque using arrays or linked lists in a programming language.",
+    "justify the use of deques over other data structures for specific use cases."
+  ];
   const characteristics = [
     "Dynamic Size: Deques can grow and shrink as needed.",
     "Two Ends: Elements can be added and removed from both the front and rear.",
@@ -40,6 +47,7 @@ const DequeTheory = () => {
     <GenericTheorySection
       title={title}
       introduction={introduction}
+      outcomes={outcomes}
       characteristics={characteristics}
       types={types}
       operations={operations}

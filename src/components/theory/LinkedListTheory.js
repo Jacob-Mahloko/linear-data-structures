@@ -4,6 +4,14 @@ import GenericTheorySection from './GenericTheorySection';
 const LinkedListTheory = () => {
   const title = "Theory of Linked Lists";
   const introduction = "A linked list is a linear data structure in which elements are stored in nodes, where each node contains data and a reference to the next node...";
+  const outcomes = [
+    "explain the basic operations performed on linked lists: insertion, deletion, traversal and search.",
+    "explain how nodes in a linked list are connected through pointers or references.",
+    "show how data is stored and accessed in a linked list.",
+    "implement a linked list in a programming language using classes or structures.",
+    "use linked lists to solve practical problems.",
+    "discuss why a linked list would be the best choice over other data structures for a specific problem."
+  ];
   const characteristics = [
     "Dynamic Size: The size of a linked list can grow or shrink as needed.",
     "Non-contiguous Memory Allocation: Nodes can be stored anywhere in memory.",
@@ -41,6 +49,7 @@ const LinkedListTheory = () => {
     <GenericTheorySection
       title={title}
       introduction={introduction}
+      outcomes={outcomes}
       characteristics={characteristics}
       types={types}
       operations={operations}

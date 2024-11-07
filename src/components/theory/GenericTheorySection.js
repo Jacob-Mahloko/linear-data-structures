@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const GenericTheorySection = ({ title, introduction, characteristics, types, operations, advantages, disadvantages, applications, conclusion }) => {
+const GenericTheorySection = ({ title, introduction, outcomes, characteristics, types, operations, advantages, disadvantages, applications, conclusion }) => {
   return (
     <div className="theory-container">
       <h1>{title}</h1>
@@ -10,6 +10,17 @@ const GenericTheorySection = ({ title, introduction, characteristics, types, ope
         <h2>Introduction</h2>
         <p>{introduction}</p>
       </section>
+
+      <section>
+        <h2>Learning Outcomes</h2>
+        <h3>Upon completion of this section, students must be able to: </h3>
+        <ul>
+          {outcomes?.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
 
       <section>
         <h2>Characteristics</h2>
