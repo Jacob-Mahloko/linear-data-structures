@@ -4,6 +4,13 @@ import GenericTheorySection from './GenericTheorySection';
 const QueueTheory = () => {
   const title = "Theory of Queues";
   const introduction = "A queue is a linear data structure that follows the First In First Out (FIFO) principle...";
+  const outcomes = [
+    "explain the basic operations performed on a queue: enqueue, dequeue, peek.",
+    "describe how data is added and removed from a queue.",
+    "use queues to solve practical problems, such as scheduling",
+    "compare the different queues and their use cases",
+    "discuss the efficiency of different queue implementations in different scenarios."
+  ];
   const characteristics = [
     "FIFO Order: The first element added is the first to be removed.",
     "Dynamic Size: Queues can grow and shrink as needed.",
@@ -41,6 +48,7 @@ const QueueTheory = () => {
     <GenericTheorySection
       title={title}
       introduction={introduction}
+      outcomes={outcomes}
       characteristics={characteristics}
       types={types}
       operations={operations}
