@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { applicationBasedQuestions } from "../questions/ApplicationBasedQuestions";
+import ApplicationEvaluation from "../ApplicationEvaluation";
 
-const ApplicationBasedTask = ({ onComplete }) => {
+const ApplicationBasedTask = () => {
   const [userAnswers, setUserAnswers] = useState(
     applicationBasedQuestions.map(() => "")
   );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [evaluationResults, setEvaluationResults] = useState([]);
 
   const handleAnswerSelection = (index, selectedOption) => {
     const updatedAnswers = [...userAnswers];
@@ -13,13 +16,28 @@ const ApplicationBasedTask = ({ onComplete }) => {
   };
 
   const handleComplete = () => {
-    const results = userAnswers.map((answer, index) => ({
-      question: applicationBasedQuestions[index].question,
-      selectedAnswer: answer,
-      correctAnswer: applicationBasedQuestions[index].correctAnswer,
-      isCorrect: answer === applicationBasedQuestions[index].correctAnswer,
-    }));
-    onComplete(results);
+    // Collecting results
+    const results = applicationBasedQuestions.map((question, index) => {
+      const answer = userAnswers[index];
+      const isCorrect = answer === question.correctAnswer;
+      return {
+        id: question.id, // For numbering purposes
+        category: question.category,
+        question: question.question,
+        selectedAnswer: answer,
+        correctAnswer: question.correctAnswer,
+        isCorrect,
+        explanation: question.explanation,
+      };
+    });
+
+    // Update evaluation results and open the modal
+    setEvaluationResults(results);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Close the modal
   };
 
   return (
@@ -65,6 +83,14 @@ const ApplicationBasedTask = ({ onComplete }) => {
       >
         Complete Task
       </button>
+
+      {/* Modal to show results */}
+      {isModalOpen && (
+        <ApplicationEvaluation
+          results={evaluationResults}
+          onClose={closeModal}
+        />
+      )}
     </div>
   );
 };

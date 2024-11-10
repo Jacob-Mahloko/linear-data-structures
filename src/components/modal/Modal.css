@@ -33,3 +33,9 @@
     background-color: #0056b3;
   }
   
+  .scrollable-content {
+    max-height: 60vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+  }

@@ -1,45 +1,42 @@
 import React, { useState } from "react";
 import { theoryQuestions } from "../questions/TheoryQuestions";
-import TheoryEvaluation from "../TheoryEvaluation"; // Import the TheoryEvaluation component
+import TheoryEvaluation from "../TheoryEvaluation";
 
 const TheoryTask = () => {
   const [userAnswers, setUserAnswers] = useState(
-    theoryQuestions.map(() => "") // Initialize empty answers for each question
+    theoryQuestions.map(() => "")
   );
-  const [evaluationResults, setEvaluationResults] = useState(null); // Store the evaluation results
-  const [modalOpen, setModalOpen] = useState(false); // Modal visibility state
+  const [evaluationResults, setEvaluationResults] = useState(null); 
+  const [modalOpen, setModalOpen] = useState(false);
 
   // Handle answer selection for each question
   const handleAnswerSelection = (index, answer) => {
     const updatedAnswers = [...userAnswers];
-    updatedAnswers[index] = answer; // Update the specific answer for the question
+    updatedAnswers[index] = answer;
     setUserAnswers(updatedAnswers);
   };
 
   // Complete the task and pass results to parent component
   const handleComplete = () => {
-    // Calculate and evaluate the answers
     const categorizedResults = userAnswers.reduce((acc, answer, index) => {
-      const category = theoryQuestions[index].category; // Get category from the question
-      const correctAnswer = theoryQuestions[index].answer; // Get correct answer from the question
+      const category = theoryQuestions[index].category;
+      const correctAnswer = theoryQuestions[index].answer;
 
-      // Initialize category if it doesn't exist in the accumulator
       if (!acc[category]) acc[category] = { total: 0, correct: 0 };
 
-      acc[category].total += 1; // Increment total question count for this category
-      if (answer === correctAnswer) acc[category].correct += 1; // Check if the answer is correct and increment correct count
+      acc[category].total += 1;
+      if (answer === correctAnswer) acc[category].correct += 1;
 
       return acc;
     }, {});
 
-    // Set the results and mark the task as completed
     setEvaluationResults(categorizedResults);
-    setModalOpen(true); // Open the modal when the task is complete
+    setModalOpen(true);
   };
 
   // Close the modal
   const handleCloseModal = () => {
-    setModalOpen(false); // Set modal visibility to false
+    setModalOpen(false);
   };
 
   return (
