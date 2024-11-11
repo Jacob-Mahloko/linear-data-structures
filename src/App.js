@@ -6,6 +6,7 @@ import StackPage from './pages/StackPage';
 import QueuePage from './pages/QueuePage';
 import DequePage from './pages/DequePage';
 import ListPage from './pages/ListPage';
+import AssessmentPage from './pages/AssessmentPage';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <li><Link to="/queue">Queue</Link></li>
             <li><Link to="/deque">Deque</Link></li>
             <li><Link to="/list">List</Link></li>
+            <li><Link to="/assessment">Assessment</Link></li>
           </ul>
         </nav>
         <Routes>
@@ -29,6 +31,7 @@ function App() {
           <Route path="/queue" element={<QueuePage />} />
           <Route path="/deque" element={<DequePage />} />
           <Route path="/list" element={<ListPage />} />
+          <Route path="/assessment" element={<AssessmentPage />} />
         </Routes>
       </div>
 
