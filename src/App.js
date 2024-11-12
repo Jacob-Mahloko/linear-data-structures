@@ -7,7 +7,10 @@ import QueuePage from './pages/QueuePage';
 import DequePage from './pages/DequePage';
 import ListPage from './pages/ListPage';
 import AssessmentPage from './pages/AssessmentPage';
+import CodeEditorPage from './pages/CodeEditor';
 import './App.css';
+
+
 
 function App() {
   return (
@@ -21,6 +24,7 @@ function App() {
             <li><Link to="/queue">Queue</Link></li>
             <li><Link to="/deque">Deque</Link></li>
             <li><Link to="/list">List</Link></li>
+            <li><Link to="/editor">C++ Code Editor</Link></li>
             <li><Link to="/assessment">Assessment</Link></li>
           </ul>
         </nav>
@@ -32,6 +36,7 @@ function App() {
           <Route path="/deque" element={<DequePage />} />
           <Route path="/list" element={<ListPage />} />
           <Route path="/assessment" element={<AssessmentPage />} />
+          <Route path="/editor" element={<CodeEditorPage />} />
         </Routes>
       </div>
 

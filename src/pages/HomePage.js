@@ -30,6 +30,7 @@ const HomePage = () => {
             <li onClick={()=>router('stack')}>Stack</li>
             <li onClick={()=>router('queue')}>Queue</li>
             <li onClick={()=>router('deque')}>Deque</li>
+            <li onClick={()=>router('editor')}>Editor</li>
             <li onClick={()=>router('list')}>List</li>
           </ul>
         </div>
