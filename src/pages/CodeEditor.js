@@ -192,9 +192,9 @@ const CodeEditorPage = () => {
       const response = await axios.post('https://linear-data-hheaefc5aqh6gahq.southafricanorth-01.azurewebsites.net/run-code', { code });
       setOutput(response.data.output);
       setError('');
-    } catch (error) {
-      console.error('Error running cide:', error.response?.data || error.message);
-      setError('Error running code: ' + (error.response?.data?.error || error.message));
+    } catch (err) {
+      console.error('Error running cide:', err.response?.data || error.message);
+      setError('Error running code: ' + (err.response?.data?.error || error.message));
       setOutput('');
     }
   };
